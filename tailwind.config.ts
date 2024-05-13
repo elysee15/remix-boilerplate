@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,6 +18,27 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Poppins", "system-ui"],
+        poppins: ["Poppins", "system-ui"],
+      },
+      fontSize: {
+        // 1rem = 16px
+        /** 80px size / 84px high / bold */
+        mega: ["5rem", { lineHeight: "5.25rem", fontWeight: "700" }],
+        /** 56px size / 62px high / bold */
+        h1: ["3.5rem", { lineHeight: "3.875rem", fontWeight: "700" }],
+        /** 40px size / 48px high / bold */
+        h2: ["2.5rem", { lineHeight: "3rem", fontWeight: "700" }],
+        /** 32px size / 36px high / bold */
+        h3: ["2rem", { lineHeight: "2.25rem", fontWeight: "700" }],
+        /** 28px size / 36px high / bold */
+        h4: ["1.75rem", { lineHeight: "2.25rem", fontWeight: "700" }],
+        /** 24px size / 32px high / bold */
+        h5: ["1.5rem", { lineHeight: "2rem", fontWeight: "700" }],
+        /** 16px size / 20px high / bold */
+        h6: ["1rem", { lineHeight: "1.25rem", fontWeight: "700" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -75,6 +96,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

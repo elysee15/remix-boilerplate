@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -72,5 +72,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .orange_bar {
+    @apply after:content-['\00a0'] relative after:h-2 md:after:h-2.5 after:ml-3 md:after:ml-[18px] after:translate-y-1 after:w-8 md:after:w-10 after:bg-[#FC3D3D] after:inline-block after:align-bottom;
   }
 }

@@ -1,6 +1,7 @@
 {
   "include": [
     "**/*.ts",
+    "./app/types/index.d.ts",
     "**/*.tsx",
     "**/.server/**/*.ts",
     "**/.server/**/*.tsx",
