@@ -28,8 +28,8 @@ const MenuItems: MenuItem[] = [
 
 function Footer() {
   return (
-    <footer>
-      <ul className="flex justify-center items-center gap-10 py-4 md:gap-20 text-sm">
+    <footer className="">
+      <ul className="flex justify-center flex-wrap md:flex-nowrap items-center gap-5 py-4 md:gap-20 text-sm">
         {MenuItems.map((item) => (
           <li key={item.label} className="text-[#BBC3C3]">
             <Link to={item.href} className="flex items-center gap-1">

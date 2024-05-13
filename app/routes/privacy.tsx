@@ -1,11 +1,11 @@
 import PageLayout from "~/components/layout/page-layout";
 import LegalSection from "~/components/legal/legal-section";
 
-function LegalPage() {
+function PrivacyPage() {
   return (
     <PageLayout>
       <article className="space-y-8 pb-10">
-        <h1>Legal</h1>
+        <h1>Privacy</h1>
 
         <div className="space-y-6">
           <p className="text-balance">
@@ -60,4 +60,4 @@ function LegalPage() {
   );
 }
 
-export default LegalPage;
+export default PrivacyPage;
