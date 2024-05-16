@@ -11,6 +11,7 @@ import globalStyles from "~/styles/globals.css?url";
 import i18next from "./lib/i18next.server";
 import { useTranslation } from "react-i18next";
 import { useChangeLanguage } from "remix-i18next/react";
+import React from "react";
 
 export const links: LinksFunction = () => [
   {
@@ -59,6 +60,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.ENV = ${JSON.stringify(ENV)}`,
+          }}
+        />
       </body>
     </html>
   );

@@ -32,7 +32,8 @@
     "remix-i18next": "^6.1.0",
     "remix-validated-form": "^5.1.5",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.6"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.9.1",
