@@ -73,19 +73,4 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  h1 {
-    @apply text-4xl md:text-6xl font-extrabold orange_bar mb-6;
-  }
-
-  input:placeholder,
-  textarea:placeholder {
-    @apply text-white/30;
-  }
-}
-
-@layer utilities {
-  .orange_bar {
-    @apply after:content-['\00a0'] relative after:h-2 md:after:h-2.5 after:ml-3 md:after:ml-[18px] after:translate-y-2 after:w-8 md:after:w-10 after:bg-[#FC3D3D] after:inline-block after:align-bottom;
-  }
 }

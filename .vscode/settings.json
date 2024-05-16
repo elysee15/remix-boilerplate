@@ -12,5 +12,8 @@
       "console",
       "node:console"
     ],
-    "workbench.editorAssociations": {}
+    "workbench.editorAssociations": {},
+    "i18n-ally.localesPaths": [
+      "public/locales"
+    ]
   }
