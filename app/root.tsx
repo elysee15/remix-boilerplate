@@ -12,6 +12,7 @@ import i18next from "./lib/i18next.server";
 import { useTranslation } from "react-i18next";
 import { useChangeLanguage } from "remix-i18next/react";
 import React from "react";
+import { getPublicEnv } from "./lib/env.server";
 
 export const links: LinksFunction = () => [
   {
@@ -35,7 +36,7 @@ export const links: LinksFunction = () => [
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const locale = await i18next.getLocale(request);
-  return json({ locale });
+  return json({ locale, ENV: getPublicEnv() });
 }
 
 export const handle = {
@@ -43,7 +44,7 @@ export const handle = {
 };
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { locale } = useLoaderData<typeof loader>();
+  const { locale, ENV } = useLoaderData<typeof loader>();
   const { i18n } = useTranslation();
 
   useChangeLanguage(locale);
